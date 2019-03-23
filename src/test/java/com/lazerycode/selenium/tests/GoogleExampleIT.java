@@ -2,6 +2,9 @@ package com.lazerycode.selenium.tests;
 
 import com.lazerycode.selenium.DriverBase;
 import com.lazerycode.selenium.page_objects.GoogleHomePage;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +16,7 @@ public class GoogleExampleIT extends DriverBase {
         return driver -> driver.getTitle().toLowerCase().startsWith(searchString.toLowerCase());
     }
 
-    @Test
+    /*@Test*/
     public void googleCheeseExample() throws Exception {
         // Create a new WebDriver instance
         // Notice that the remainder of the code relies on the interface,
@@ -24,7 +27,7 @@ public class GoogleExampleIT extends DriverBase {
         driver.get("http://www.google.com");
         // Alternatively the same thing can be done like this
         // driver.navigate().to("http://www.google.com");
-
+        
         GoogleHomePage googleHomePage = new GoogleHomePage();
 
         // Check the title of the page
@@ -42,7 +45,7 @@ public class GoogleExampleIT extends DriverBase {
         System.out.println("Page title is: " + driver.getTitle());
     }
 
-    @Test
+    /*@Test*/
     public void googleMilkExample() throws Exception {
         // Create a new WebDriver instance
         // Notice that the remainder of the code relies on the interface,
