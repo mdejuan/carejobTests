@@ -10,7 +10,7 @@ import com.lazerycode.selenium.page_objects.CareJobLoginPage;
 public class CareJobLoginIT extends DriverBase {
 	
 	@Test
-	public void googleCheeseExample() throws Exception {
+	public void careJobLogin() throws Exception {
 
 		WebDriver driver = getDriver();
 
